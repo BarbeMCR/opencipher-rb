@@ -32,7 +32,7 @@ The encryption algorithm works as follows:
 - if `multiple` is True, a random `interval` in the range [1, 16] is chosen and each byte in an `interval`-sized chunk of `file` is substituted using the encryption table. Every `interval`, the encryption table is regenerated using the same method as above. If `intervals` is True, the `interval` is randomly set again
 - the PRNG initial seed is passed to `OpenCipher.encrypt_key` for encryption to `file.key` based on `secret`
 - the encryption products (`file.lock` and `file.key`) are authenticated to `file.auth` using `OpenCipher.authenticate`
-- `file.lock`, `file.key` and `file.auth` are hashed using `opencipher.hash` and the result is appended to `file.auth`
+- `file.lock`, `file.key` and `file.auth` are hashed using `OpenCipher.hash` and the result is appended to `file.auth`
 
 `OpenCipher.encrypt_string(string, secret, multiple:False, intervals:False)`
 
