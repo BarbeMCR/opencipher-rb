@@ -9,11 +9,11 @@ While this application and its underlying API employ some security practices, yo
 
 **_This is a Ruby reimplementation of BarbeMCR's OpenCipher (which is implemented in Python). Please note that files and strings encrypted with BarbeMCR's OpenCipher for Ruby are NOT compatible with BarbeMCR's OpenCipher (and viceversa) and will error on decryption._**
 
-Here are the two main cosmetic differences with the original BarbeMCR's OpenCipher:
+Here are the two main cosmetic differences from the original BarbeMCR's OpenCipher:
 - The `*.key` file here holds the encrypted initial seed, while in the original it held the encrypted internal `random` PRNG state
 - The SHA-512 checksum in the `*.auth` file here is a raw digest, while in the original it was an hexdigest
 
-Again, any `*.lock`, `*.key` or `*.auth` file **(or string encryption output)** that was generated using BarbeMCR's OpenCipher for Ruby will *__NOT__* be decryptable in, nor otherwise compatible in (pretty much) any way with, BarbeMCR's OpenCipher *[the original Python implementation]*, *__and viceversa__*.
+Again, any `*.lock`, `*.key` or `*.auth` file **(or string encryption output)** that was generated using BarbeMCR's OpenCipher for Ruby will *__NOT__* be decryptable in (nor otherwise compatible in pretty much any way with) BarbeMCR's OpenCipher *[the original Python implementation]*, *__and viceversa__*.
 
 ## BarbeMCR's OpenCipher for Ruby API
 
